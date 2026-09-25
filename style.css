@@ -1,17 +1,14 @@
-/* --- Variables & Theming --- */
 :root {
-    /* Moss Green Theme */
     --bg-color: #f1f6ed;
     --text-color: #2b3a1a;
     --primary-color: #556b2f; /* Dark Olive Green */
     --accent-color: #8fbc8f; /* Dark Sea Green */
     --card-bg: #ffffff;
     --border-color: #2b3a1a;
-    
-    /* Typography */
     --font-heading: 'Bebas Neue', cursive;
     --font-body: 'Space Mono', monospace;
 }
+
 
 [data-theme="dark"] {
     --bg-color: #1a2211;
@@ -22,12 +19,14 @@
     --border-color: #8fbc8f;
 }
 
+
 /* --- Base Styling --- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 
 body {
     background-color: var(--bg-color);
@@ -37,10 +36,12 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+
 h1, h2, h3 {
     font-family: var(--font-heading);
     letter-spacing: 2px;
 }
+
 
 /* --- Header & Navigation --- */
 header {
@@ -49,6 +50,7 @@ header {
     padding: 1.5rem;
     border-bottom: 5px solid var(--border-color);
 }
+
 
 .header-container {
     max-width: 1000px;
@@ -60,24 +62,28 @@ header {
     gap: 1rem;
 }
 
-/* --- Header Grouping --- */
+
+/* --- Header --- */
 .header-controls {
     display: flex;
     align-items: center;
-    gap: 2rem; /* Space between the links and the button */
+    gap: 2rem;
     flex-wrap: wrap;
     justify-content: center;
 }
 
+
 header h1 {
     font-size: 2.5rem;
 }
+
 
 nav ul {
     list-style: none;
     display: flex;
     gap: 1.5rem;
 }
+
 
 nav a {
     color: var(--bg-color);
@@ -89,11 +95,13 @@ nav a {
     transition: all 0.2s ease;
 }
 
+
 nav a:hover {
     border: 2px solid var(--bg-color);
     border-radius: 5px;
     background: rgba(255, 255, 255, 0.1);
 }
+
 
 /* --- Buttons --- */
 .btn {
@@ -104,14 +112,16 @@ nav a:hover {
     font-family: var(--font-heading);
     font-size: 1.2rem;
     cursor: pointer;
-    box-shadow: 4px 4px 0 var(--border-color); /* Modern Fun offset shadow */
+    box-shadow: 4px 4px 0 var(--border-color);
     transition: transform 0.1s, box-shadow 0.1s;
 }
+
 
 .btn:active {
     transform: translate(4px, 4px);
     box-shadow: 0 0 0 var(--border-color);
 }
+
 
 .link-btn {
     display: inline-block;
@@ -119,12 +129,14 @@ nav a:hover {
     margin-top: 1rem;
 }
 
+
 /* --- Main Layout & Sections --- */
 main {
     max-width: 1000px;
     margin: 2rem auto;
     padding: 0 1rem;
 }
+
 
 .card {
     background-color: var(--card-bg);
@@ -135,6 +147,7 @@ main {
     box-shadow: 8px 8px 0 var(--accent-color);
 }
 
+
 .card h2 {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
@@ -142,12 +155,14 @@ main {
     display: inline-block;
 }
 
+
 /* --- About Section (Images & Lists) --- */
 .profile-layout {
     display: flex;
     gap: 2rem;
     align-items: flex-start;
 }
+
 
 .profile-img {
     width: 250px;
@@ -158,14 +173,17 @@ main {
     background-color: var(--primary-color);
 }
 
+
 .bio ul {
     margin-left: 1.5rem;
     margin-top: 0.5rem;
 }
 
+
 .bio li {
     margin-bottom: 0.5rem;
 }
+
 
 /* --- Dashboard (Timers & Clock) --- */
 .highlight-card {
@@ -173,15 +191,18 @@ main {
     color: var(--bg-color);
 }
 
+
 .highlight-card h2 {
     border-bottom-color: var(--accent-color);
 }
+
 
 .widget-container {
     display: flex;
     gap: 1.5rem;
     flex-wrap: wrap;
 }
+
 
 .widget {
     flex: 1;
@@ -193,26 +214,30 @@ main {
     text-align: center;
 }
 
+
 .digital-display {
     font-size: 1.5rem;
     font-weight: bold;
     margin-top: 1rem;
     background: #000;
-    color: #0f0; /* Retro digital green */
+    color: #0f0;
     padding: 10px;
     border-radius: 5px;
     border: 2px solid var(--accent-color);
 }
 
-/* --- FAQ Accordion --- */
+
+/* --- FAQ --- */
 .faq {
     color: var(--text-color);
 }
+
 
 .faq-item {
     margin-bottom: 1rem;
     border: 3px solid var(--border-color);
 }
+
 
 .faq-question {
     width: 100%;
@@ -227,10 +252,12 @@ main {
     transition: background 0.3s;
 }
 
+
 .faq-question:hover {
     background: var(--primary-color);
     color: var(--bg-color);
 }
+
 
 .faq-answer {
     max-height: 0;
@@ -241,10 +268,12 @@ main {
     color: var(--text-color);
 }
 
+
 .faq-answer.active {
     max-height: 200px;
     padding: 1rem;
 }
+
 
 /* --- Footer --- */
 footer {
@@ -256,45 +285,47 @@ footer {
     font-weight: bold;
 }
 
-/* --- Responsive Layout --- */
+
 @media (max-width: 768px) {
     .profile-layout {
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
-    
+   
     .bio ul {
         list-style-position: inside;
         margin-left: 0;
     }
+
 
     .header-container {
         flex-direction: column;
         text-align: center;
     }
 
+
     nav ul {
         flex-wrap: wrap;
         justify-content: center;
     }
 }
-/* --- Jumpscare Styling --- */
 #jumpscare-container {
-    display: none; /* Hidden by default */
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
     background-color: #000;
-    z-index: 9999; /* Forces it to the very front */
+    z-index: 9999;
     justify-content: center;
     align-items: center;
 }
 
+
 #jumpscare-img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures the image fills the screen */
+    object-fit: cover;
 }
