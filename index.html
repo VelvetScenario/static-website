@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Profile</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <h1>Kyle's World</h1>
+            
+            <div class="header-controls">
+                <nav>
+                    <ul>
+                        <li><a href="#about">About Me</a></li>
+                        <li><a href="#dashboard">Dashboard</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </nav>
+                <button id="darkModeToggle" class="btn">Toggle Dark Mode</button>
+            </div>
+            
+        </div>
+    </header>
+
+    <main>
+        <!-- Section 1: About -->
+        <section id="about" class="card">
+            <h2 class="faq">Five Days At Kyle</h2>
+            <div class="profile-layout">
+                <!-- Replace src with your actual image path later -->
+                <img src=kyle.jpeg alt="A photo of me" class="profile-img">
+                <div class="bio">
+                    <p class="faq">Hello! Cant wait to meet you!</p>
+                    <h3 class="faq">My Skills:</h3>
+                    <ul>
+                        <li class="faq">Throwing C4</li>
+                        <li class="faq">Catching Strays</li>
+                        <li class="faq">Begging</li>
+                        <li class="faq">SUpermarket CEO</li>
+                    </ul>
+                    <a href="https://github.com/VelvetScenario" target="_blank" class="btn link-btn">GitHub</a>
+                    <a href="https://facebook.com" target="_blank" class="btn link-btn">Facebook</a>
+                    <a href="https://instagram.com" target="_blank" class="btn link-btn">Instagram</a>
+                    <a href="https://discord.com" target="_blank" class="btn link-btn">Discord</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Interactive Dashboard (Timers) -->
+        <section id="dashboard" class="card highlight-card">
+            <h2>Live Dashboard</h2>
+            
+            <div class="widget-container">
+                <!-- JS Requirement 1: Live Time Counter -->
+                <div class="widget clock-widget">
+                    <h3>Current Time</h3>
+                    <div id="liveClock" class="digital-display">00:00:00 AM</div>
+                </div>
+
+                <!-- JS Requirement 2: Countdown Timer -->
+                <div class="widget countdown-widget">
+                    <h3>Countdown to New Year</h3>
+                    <div id="countdownTimer" class="digital-display">
+                        00 Days | 00 Hours | 00 Mins | 00 Secs
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: FAQ -->
+        <section id="faq" class="card">
+            <h2 class="faq">Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">What is your favorite color?</button>
+                    <div class="faq-answer">
+                        <p>Moss green, of course! It feels earthy, relaxing, and vibrant.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">What games are in your rotation?</button>
+                    <div class="faq-answer">
+                        <p>Valorant, Wardogs, Whatever my friends play tbh.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Where you at twin?</button>
+                    <div class="faq-answer">
+                        <p>up your fucking a-.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Kyle's Profile. Built with [please connect to the internet to access local LLM].</p>
+    </footer>
+
+    <div id="jumpscare-container">
+        <img src=Foxy.gif alt="Scary face" id="jumpscare-img">
+    </div>
+    <audio id="jumpscare-sound" src="https://assets.mixkit.co/active_storage/sfx/2870/2870-preview.mp3" preload="auto"></audio>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
